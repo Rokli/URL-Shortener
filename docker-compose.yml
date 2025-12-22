@@ -5,7 +5,7 @@ services:
     environment:
       POSTGRES_DB: shortener
       POSTGRES_USER: app
-      POSTGRES_PASSWORD: secret
+      POSTGRES_PASSWORD: testpass
     ports:
       - "5432:5432"
     volumes:
@@ -17,16 +17,16 @@ services:
       - "6379:6379"
     command: redis-server --save 60 1
 
-  app:
-    build: .
-    ports:
-      - "8080:8080"
-    environment:
-      DB_HOST: postgres
-      REDIS_HOST: redis
-    depends_on:
-      - postgres
-      - redis
+  # app:
+  #   build: .
+  #   ports:
+  #     - "8080:8080"
+  #   environment:
+  #     DB_HOST: postgres
+  #     REDIS_HOST: redis
+  #   depends_on:
+  #     - postgres
+  #     - redis
 
 volumes:
   postgres_data:

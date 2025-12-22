@@ -1,0 +1,1 @@
+INSERT INTO url VALUES (1,'vk.com','google.com')
