@@ -14,3 +14,14 @@ func UrlShortener(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Println(long_url)
 }
+
+func RedirectUrl(w http.ResponseWriter, r *http.Request) {
+}
+
+func GetStats(w http.ResponseWriter, r *http.Request) {
+
+}
+
+func DeleteUrl(w http.ResponseWriter, r *http.Request) {
+
+}
