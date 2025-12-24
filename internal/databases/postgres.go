@@ -1,12 +1,18 @@
 package databases
 
-type Url struct {
-	id        int
-	long_url  string
-	short_url string
+import (
+	"database/sql"
+
+	"github.com/Rokli/URL-Shortener/internal/domain"
+)
+
+type postgresUrlRepository struct {
+	db *sql.DB
 }
 
-func getData() []Url { return []Url{{id: 1, long_url: "https://google.com", short_url: "googl"}} }
+func getData() []domain.Url {
+	return []domain.Url{domain.CreateNewUrl()}
+}
 
 func GetUrl(id int) string { return "google.com" }
 

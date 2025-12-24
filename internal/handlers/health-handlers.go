@@ -10,7 +10,7 @@ type HealthResponse struct {
 	Service string
 }
 
-func HealthCheck(w http.ResponseWriter, r *http.Request) {
+func HealthCheckAll(w http.ResponseWriter, r *http.Request) {
 	response := HealthResponse{
 		Status:  "healthy",
 		Service: "server",

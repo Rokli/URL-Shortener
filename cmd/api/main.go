@@ -13,7 +13,9 @@ func main() {
 
 	router := mux.NewRouter()
 
-	router.HandleFunc("/api/health", handlers.HealthCheck).Methods("GET")
+	router.HandleFunc("/api/v1/health", handlers.HealthCheckAll).Methods("GET")
+
+	router.HandleFunc("/api/v1/get/short/{url}", handlers.UrlShortener)
 
 	http.Handle("/", router)
 	fmt.Println("Server is listening")
