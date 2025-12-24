@@ -2,23 +2,21 @@ package databases
 
 import (
 	"database/sql"
-
-	"github.com/Rokli/URL-Shortener/internal/domain"
 )
 
 type postgresUrlRepository struct {
 	db *sql.DB
 }
 
-func getData() []domain.Url {
-	return []domain.Url{domain.CreateNewUrl()}
-}
+// func getData() []domain.Url {
+// 	return []domain.Url{domain.CreateNewUrl()}
+// }
 
-func GetUrl(id int) string { return "google.com" }
+// func GetUrl(id int) string { return "google.com" }
 
-func CreateUrl(long_url string) error { return nil }
+// func CreateUrl(long_url string) error { return nil }
 
-func UpdateUrl(id int) error { return nil }
+// func UpdateUrl(id int) error { return nil }
 
 // func GetDBConnect() sql.DB {
 // 	connStr := "user=app password=testpass dbname=shortener sslmode=disable"
